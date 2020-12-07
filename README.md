@@ -20,8 +20,8 @@ customFilter: a custom filter function for links to delete (this function can be
 const { cleanupOldLinks } = require("rebrandly-cleanup");
 
 // Delete links made before 2 days ago
-const links = cleanupOldLinks(REBRANDLY_API_KEY, 2); // returns links that were deleted
+const linksOlderThanTwoDays = cleanupOldLinks(REBRANDLY_API_KEY, 2); // returns links that were deleted
 
 // Use a custom filter (can be async)
-const links = cleanupOldLinks(REBRANDLY_API_KEY, null, customFilterFunction);
+const customFilteredLinks = cleanupOldLinks(REBRANDLY_API_KEY, null, customFilterFunction);
 ```
