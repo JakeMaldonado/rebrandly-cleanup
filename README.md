@@ -24,6 +24,6 @@ const { cleanupOldLinks } = require("rebrandly-cleanup");
   const linksOlderThanTwoDays = await cleanupOldLinks(REBRANDLY_API_KEY, 2); // returns links that were deleted
 
   // Use a custom filter (can be async)
-  const customFilteredLinks = await cleanupOldLinks(REBRANDLY_API_KEY, null, customFilterFunction);
+  const customFilteredLinks = await cleanupOldLinks(REBRANDLY_API_KEY, null, customFilterFunction); // returns links that were deleted
 })()
 ```
