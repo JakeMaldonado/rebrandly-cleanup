@@ -19,16 +19,16 @@ async function cleanupOldLinks(
 
   let linksToDelete;
   if (customFilter) {
-    linksToDelete = customFilter(links);
+    linksToDelete = await customFilter(links);
   } else {
     linksToDelete = dateFilter(links, daysAgo);
   }
 
   // return deleted links
-  // for (let i = 0; i < linksToDelete.length; i++) {
-  //   link = linksToDelete[i];
-  //   await deleteLink(link);
-  // }
+  for (let i = 0; i < linksToDelete.length; i++) {
+    link = linksToDelete[i];
+    await deleteLink(link, REBRANDLY_API_KEY);
+  }
 
   return linksToDelete;
 }
@@ -87,4 +87,13 @@ function dateFilter(links, daysAgo) {
   return toDelete;
 }
 
-async function deleteLink(link) {}
+async function deleteLink(link, REBRANDLY_API_KEY) {
+  response = await axios({
+    method: "delete",
+    url: `https://api.rebrandly.com/v1/links/${link.id}`,
+    headers: {
+      "Content-Type": "application/json",
+      apikey: REBRANDLY_API_KEY,
+    },
+  });
+}
