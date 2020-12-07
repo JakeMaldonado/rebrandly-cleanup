@@ -15,7 +15,6 @@ async function cleanupOldLinks(
 
   // get all links
   let links = await getAllLinks(REBRANDLY_API_KEY);
-  console.log(links.length);
 
   let linksToDelete;
   if (customFilter) {

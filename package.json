@@ -1,6 +1,6 @@
 {
   "name": "rebrandly-cleanup",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Cleanup old rebrandly links",
   "main": "index.js",
   "scripts": {
@@ -13,5 +13,13 @@
   "license": "ISC",
   "dependencies": {
     "axios": "^0.21.0"
+  },
+  "bugs": {
+    "url": "https://github.com/JakeMaldonado/rebrandly-cleanup/issues"
+  },
+  "homepage": "https://github.com/JakeMaldonado/rebrandly-cleanup#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakeMaldonado/rebrandly-cleanup.git"
   }
 }
