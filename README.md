@@ -1,4 +1,4 @@
-# Slack string to Emoji
+# Rebrandly cleanup
 
 ### Install
 
